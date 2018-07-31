@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		div{
+			width: 520px;
+			height: 280px;
+			margin: 50px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		ul{
+		    width: 3120px;
+		    height: 280px;  
+		    position: relative;
+		}
+		.tst{
+				transition: all 0.5s;
+			}
+		ul li{
+			width: 520px;
+			height: 280px;
+			float: left;
+		}
+		ol{
+			width: 220px;
+			height: 20px;
+			position: absolute;
+			left: 50%;
+			margin-left: -82px;
+			bottom: 3px;
+            margin-bottom: 0px;
+		}
+
+		ol li{
+			width: 20px;
+			height: 20px;
+			border:1px solid #ff2817 ;
+			border-radius: 50%;
+			float: left;
+			margin-right: 5px;
+		}
+		ol li.current{
+				background: #f60;
+			}
+		span{
+			width: 30px;
+			height: 50px;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+         #left{
+         	left: 10px;
+         }
+         #right{
+         	right: 10px;
+         }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="main">
+			<li><img src="image/one.jpg" alt=""></li>
+			<li><img src="image/two.jpg" alt=""></li>
+			<li><img src="image/three.jpg" alt=""></li>
+			<li><img src="image/four.jpg" alt=""></li>
+			<li><img src="image/five.jpg" alt=""></li>
+			<li><img src="image/six.jpg" alt=""></li>
+		</ul>
+		<ol id="foot">
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<span id="left">左</span>
+		<span id="right">右</span>
+	</div>
+	<script>
+		var num=0;
+		var timer;
+		//1.让ul移动起来
+             timer=setInterval(function(){
+                 if(num<6){
+                  main.className='tst'//2.添加过渡
+                  main.style.left=-520*num+'px'
+                  //3.给ol选中效果
+                  for(var i=0;i<foot.children.length;i++)  {	  
+       	            foot.children[i].removeAttribute('class')       
+              	   } 
+              	foot.children[num].setAttribute('class','current')
+                   num++ 
+                 }
+                 else{
+                 	num=0
+                 }      
+             },1000);
+            // 4.鼠标移入停止定时器
+			wrap.onmouseover=function(){
+				clearInterval(timer)
+			}
+			// 4.鼠标移出开始定时器
+			wrap.onmouseout=function(){
+				timer=setInterval(function(){
+                 if(num<6){
+                  main.className='tst'
+                  main.style.left=-520*num+'px'
+                  //给ol选中效果
+                  for(var i=0;i<foot.children.length;i++)  {	  
+       	            foot.children[i].removeAttribute('class')       
+              	   } 
+              	foot.children[num].setAttribute('class','current')
+                   num++ 
+                 }
+                 else{
+                 	num=0
+                 }      
+             },1000);
+			}
+         //5.左移动
+          var oleft=document.getElementById('left');
+          oleft.onclick=function(){
+                 if(num<0){
+                 	num=5
+                 }
+                 else{
+                 	 main.className='tst'
+                  main.style.left=-520*num+'px'
+                  //给ol选中效果
+                  for(var i=0;i<foot.children.length;i++)  {	  
+       	            foot.children[i].removeAttribute('class')       
+              	   } 
+              	foot.children[num].setAttribute('class','current')
+                   num-- 
+                 }      
+          }
+         //5.右移动
+          var oright=document.getElementById('right');
+          oright.onclick=function(){
+                 if(num>5){
+                 	num=0;
+                 }
+                 else{
+                  main.className='tst'
+                  main.style.left=-520*num+'px'
+                  //给ol选中效果
+                  for(var i=0;i<foot.children.length;i++)  {	  
+       	            foot.children[i].removeAttribute('class')       
+              	   } 
+              	foot.children[num].setAttribute('class','current')
+                   num++ 
+                 }
+                     
+          }
+	</script>
+</body>
+</html>

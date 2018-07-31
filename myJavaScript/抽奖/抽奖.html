@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		div{
+			width: 610px;
+			height: 610px;
+			/* background: pink; */
+			margin: 0 auto;
+			margin-top: 20px;
+			position: relative;
+		}
+		ul{
+			width: 1640px;
+			height: 200px;
+            position: relative;
+		}
+		ul li{
+			width: 200px;
+			height: 200px;
+			background: rgba(0, 0, 0, 0.2);
+			float: left;
+			margin-right: 5px;
+			border-color: #bedaf9;
+			border: 1px solid ;
+			opacity: 0.5;
+		}
+		li:nth-of-type(1){
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+		li:nth-of-type(2){
+			position: absolute;
+			left: 205px;
+			top: 0px;
+		}
+		li:nth-of-type(3){
+			position: absolute;
+			left: 410px;
+			top: 0px;
+		}
+		li:nth-of-type(4){
+			position: absolute;
+			left: 0px;
+			top: 205px;
+		}
+		li:nth-of-type(5){
+			position: absolute;
+			left: 410px;
+			top: 205px;
+		}
+		li:nth-of-type(6){
+			position: absolute;
+			left:0px;
+			top: 410px;
+		}
+		li:nth-of-type(7){
+			position: absolute;
+			left: 205px;
+			top: 410px;
+		}
+		li:nth-of-type(8){
+			position: absolute;
+			left:410px;
+			top:410px;
+
+		}
+		button{
+			width: 100px;
+			height: 100px;
+			/* border-radius: 50%; */
+			background:#75afaf;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            border-color: #fff;
+            font-size: 20px;
+            color: white;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img src="image/p1.PNG" alt=""></li>
+			<li><img src="image/p2.PNG" alt=""></li>
+			<li><img src="image/p3.PNG" alt=""></li>
+			<li><img src="image/p4.PNG" alt=""></li>
+			<li><img src="image/p5.PNG" alt=""></li>
+			<li><img src="image/p6.PNG" alt=""></li>
+			<li><img src="image/p7.PNG" alt=""></li>
+			<li><img src="image/p8.PNG" alt=""></li>
+		</ul>
+		<button id="begin">开始</button>
+	</div>
+	<script>
+	   window.onload=function(){
+	    var oli=document.getElementsByTagName('li');
+		var j=-1;
+        var timer1,timer2;
+        begin.onclick=function(){
+            var num=Math.random()*5000+3000;
+        		timer1=setInterval(function(){
+                        j=j+1;
+                        if(j==8){
+                            j=0;
+                        }
+                        oli[7].style.opacity='0.5';
+                        oli[j].style.opacity='1';
+                        oli[j-1].style.opacity='0.5';
+        			},100)
+                timer2=setInterval(function(){
+                    clearInterval(timer1);
+                    clearInterval(timer2);
+                },num)
+        		}
+	}		
+	</script>
+</body>
+</html>
