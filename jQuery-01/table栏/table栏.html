@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		ul{
+         width: 255px;
+         height: 20px;
+		}
+		li{
+			background: #e4eef9;
+			width: 60px;
+			height: 20px;
+			list-style: none;
+			float: left;
+			margin-left:2px;
+			text-align: center;
+			padding-top: 5px;
+		}
+		li.current{
+			background: #e4eef9;
+			border-top: 2px solid #77abe8;
+			color: #77abe8;
+		}
+		section{
+			width: 250px;
+			height: 160px;
+			margin-left: 40px;
+			margin-top: -10px;
+		}
+        div{
+        	width: 248px;
+			height: 160px;
+			/* background: yellow; */
+			display:none ;
+        }
+        div.current{
+        	display: block;
+        }
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="current">头条</li>
+		<li>娱乐</li>
+		<li>看天下</li>
+		<li>万象</li>
+	</ul>
+	<section>
+		<div class="current"><img src="image/t01.PNG" alt=""></div>
+		<div><img src="image/t02.PNG" alt=""></div>
+		<div><img src="image/t03.PNG" alt=""></div>
+		<div><img src="image/t04.PNG" alt=""></div>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script>
+        $('li').click(function(){
+        	$(this).attr('class','current');
+        	$(this).siblings().removeAttr('class');
+        	var a=$(this).index;
+        	$(divs).eq(a).attr('class','current');
+        	$(divs).eq(a).siblings().removeAttr('class');
+        })
+	</script>
+</body>
+</html>
