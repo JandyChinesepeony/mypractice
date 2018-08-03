@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquery-1.11.1.js"></script>
+        <style>
+	        .ad {
+	            position: fixed;
+	            right: 0;
+	           bottom: 0;
+	            width: 400px;
+	            height: 250px;
+	            background-image: url(images/news.png);
+	            display: none;
+	        }
+	        .ad span {
+	            position: absolute;
+	            right: 20px;
+	            top: 10px;
+	            width: 20px;
+	            height: 20px;
+	            cursor: pointer;
+	            
+	            
+	        }
+        </style>
+    </head>
+    <body>
+    	<div class="ad">
+    		<span></span> 	
+    	</div>
+
+    	<script src="js/jquery.min.js"></script>
+    	<script>			
+				$('.ad').slideDown().slideUp().fadeIn(500);
+				$('.ad').children('span').click(function(event) {
+					$(this).parent().fadeOut();
+				});			
+    	</script>
+    </body>
+</html>

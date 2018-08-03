@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		img{
+			width: 50px;
+			height: 50px;
+			margin: 30px 30px;
+		}
+		.play{
+	        animation: side 4s linear infinite;
+        }
+        @keyframes side{	
+	      0%{ transform:rotate(0)}
+	      100%{ transform:rotate(360deg)}
+        }
+	</style>
+</head>
+<body>
+	<audio src="music/Bandari - 满天星 - 班得瑞.mp3" autoplay></audio>
+	<span><img src="image/music.png" alt="" class="play"></span>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('img').click(function(event) {
+		$(this).toggleClass('play')
+		if($(this).hasClass('play')){
+			$('audio').get(0).play();
+		}else{
+			$('audio').get(0).pause();
+		}
+	});
+	</script>
+</body>
+</html>

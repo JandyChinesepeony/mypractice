@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+	    /* 导航栏 */
+		.top{
+			width: 1412px;
+			height: 24px;
+			background: #f8f8f8;
+			/* background: pink; */
+		}
+		h{
+			width: 100px;
+			height: 24px;
+			/* background: skyblue; */
+			margin-left: 120px;
+			float: left;
+			margin-top: 0px;
+			height: 24px;
+        	font-size: 13px;
+            color: #4f5560;
+            cursor: pointer;
+		}
+		h:hover{
+			color: red;
+		}
+		ul{
+			width: 800px;
+			height: 24px;
+			/* background: yellow; */
+			float: right;
+			margin-top: 0px;
+			margin-right:90px;
+		}
+		li{
+			border-left:1px dotted #ccc;
+			height: 24px;
+			list-style: none; 
+            float: left;
+            /* background: red; */
+            margin-left: 20px;
+            text-align: center;
+            padding-left: 10px;
+            font-size: 13px;
+            color: #4f5560;
+            cursor: pointer;
+		}
+		.setwidth{
+			width: 80px;
+		}
+		li.first{
+			border-left:0px dotted #ccc;
+		}
+		li:hover{
+			color: red;
+		}
+		.icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        svg{
+            font-size: 18px;
+            color: #4f5560;
+            margin-right: 10px;
+        }
+        .out{
+        	color: #fd638b;
+        	
+        }
+        .slide1{
+        	width: 70px;
+			height: 92px;
+            float: left;
+            /* background: #f8f8f8; */
+            margin-left: -10px;
+        }
+        .slide1 li{
+        	width: 80px;
+        	height: 24px;
+        	list-style: none;
+        	float: left;
+        	text-align: center;
+            font-size: 13px;
+            color: #4f5560;
+            cursor: pointer;
+            background: #f8f8f8;
+            margin-left: -40px;
+            border-left:0px dotted #ccc;
+
+        }
+        .slide1 li:hover{
+        	color: red;
+        }
+        .hid1{
+        	display: none;
+        }
+        .slide2{
+        	width: 70px;
+			height: 92px;
+            float: left;
+            /* background: #f8f8f8; */
+            margin-left: -10px;
+        }
+        .slide2 li{
+        	width: 80px;
+        	height: 24px;
+        	list-style: none;
+        	float: left;
+        	text-align: center;
+            font-size: 13px;
+            color: #4f5560;
+            cursor: pointer;
+            background: #f8f8f8;
+            margin-left: -40px;
+            border-left:0px dotted #ccc;
+
+        }
+        .slide2 li:hover{
+        	color: red;
+        }
+        .hid2{
+        	display: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="top">
+		<h><span><svg class="icon" aria-hidden="true">
+  <use xlink:href="#icon-shouye"></use>
+</svg></span>美丽说首页</h>
+
+		<ul>
+			<li class="first"><span><svg class="icon" aria-hidden="true">
+  <use xlink:href="#icon-weixin"></use>
+</svg></span>微信登陆</li>
+			<li><span></span>登陆</li>
+			<li><span></span>注册</li>
+
+			<li class="setwidth">
+	          <ul class="slide1">
+	            <li class="see1"><span><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-klmshoucang"></use>
+	            </svg></span>我的收藏</li>
+			    <li class="hid1">收藏宝贝</li>
+			    <li class="hid1">收藏店铺</li>
+		      </ul>
+		    </li>
+
+			<li><span><svg class="icon" aria-hidden="true">
+  <use xlink:href="#icon-gouwuche" class="out"></use>
+</svg></span>我的购物车</li>
+			<li><span><svg class="icon" aria-hidden="true">
+  <use xlink:href="#icon-weibiaoti-"></use>
+</svg></span>我的订单</li>
+
+            <li class="setwidth">
+	          <ul class="slide2">
+	            <li class="see2">帮助中心<span><svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-xiala"></use>
+                  </svg></span>
+                </li>
+			    <li class="hid2">买家服务</li>
+			    <li class="hid2">商家服务</li>
+			    <li class="hid2">规则中心</li>
+		      </ul>
+		    </li>
+
+			<li><span></span>商家后台</li>
+		</ul>	
+	
+	</div>
+
+    <script src="./font/iconfont.js"></script>
+	<script src='js/jquery.min.js'></script>
+	<script>
+		$('.see1').mouseenter(function(event) {
+				$('.hid1').slideDown();
+		});
+		$('.slide1').mouseleave(function(event) {
+				$('.hid1').slideUp();
+		});
+		$('.see2').mouseenter(function(event) {
+				$('.hid2').slideDown();
+		});
+		$('.slide2').mouseleave(function(event) {
+				$('.hid2').slideUp();
+		});
+	</script>
+</body>
+</html>

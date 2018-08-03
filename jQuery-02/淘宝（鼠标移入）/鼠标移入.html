@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/my.css">
+</head>
+<body>
+	<div>
+		<div class="title"><img src="images/title.png" alt=""></div>
+		<ul>
+			<li>
+				<div class="pic"><img src="images/pic01.jpg" alt=""></div>				
+				<!-- <div class="bottomhid">你好！</div> -->
+				<div class="bottom">
+				    <p class="main">日韩镀白金版奥地利水晶手链女防过敏饰品首饰保色手镯七夕礼物</p>
+					<span>￥16.8</span>
+					<p class="num">销量：12</p>
+				</div>
+			</li>
+			<li>
+				<div class="pic"><img src="images/pic02.jpg" alt=""></div>				
+				<!-- <div class="bottomhid"></div> -->
+				<div class="bottom">
+				    <p class="main">日韩镀白金版奥地利水晶手链女防过敏饰品首饰保色手镯七夕礼物</p>
+					<span>￥16.8</span>
+					<p class="num">销量：12</p>
+				</div>
+			</li>
+			<li>
+				<div class="pic"><img src="images/pic03.jpg" alt=""></div>				
+				<!-- <div class="bottomhid"></div> -->
+				<div class="bottom">
+				    <p class="main">日韩镀白金版奥地利水晶手链女防过敏饰品首饰保色手镯七夕礼物</p>
+					<span>￥16.8</span>
+					<p class="num">销量：12</p>
+
+				</div>
+			</li>
+			<li>
+				<div class="pic"><img src="images/pic04.jpg" alt=""></div>				
+				<!-- <div class="bottomhid"></div> -->
+				<div class="bottom">
+				    <p class="main">日韩镀白金版奥地利水晶手链女防过敏饰品首饰保色手镯七夕礼物</p>
+					<span>￥16.8</span>
+					<p class="num">销量：12</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$('li').mouseenter(function(event) {
+				$(this).attr('class','borderout');
+				$(this).children('.pic').fadeTo(1000, 0.5);
+				$('bottomhid').fadeIn();
+		});
+		$('li').mouseleave(function(event) {
+				$(this).removeAttr('class');
+				$(this).children('.pic').fadeTo(1000,1);
+				$(this).children('.bottom').css('background','#f1f1f1')				
+		});
+	</script>
+</body>
+</html>
