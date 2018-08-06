@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		div{
+			width: 520px;
+			height: 280px;
+			margin: 50px auto;
+			position: relative;
+			overflow: hidden;
+		}
+		ul{
+		    width: 4000px;
+		    height: 280px;  
+		    position: relative;
+		}
+		
+		ul li{
+			width: 520px;
+			height: 280px;
+			float: left;
+			transition: all 2s;
+		}
+		ol{
+			width: 220px;
+			height: 20px;
+			position: absolute;
+			left: 50%;
+			margin-left: -82px;
+			bottom: 3px;
+            margin-bottom: 0px;
+		}
+
+		ol li{
+			width: 20px;
+			height: 20px;
+			border:1px solid #ff2817 ;
+			border-radius: 50%;
+			float: left;
+			margin-right: 5px;
+		}
+		.current{
+				background: #f60;
+			}
+		span{
+			width: 30px;
+			height: 50px;
+			background: rgba(0, 0, 0, 0.4);
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+         #left{
+         	left: 10px;
+         }
+         #right{
+         	right: 10px;
+         }
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="main">
+			<li><img src="image/one.jpg" alt=""></li>
+			<li><img src="image/two.jpg" alt=""></li>
+			<li><img src="image/three.jpg" alt=""></li>
+			<li><img src="image/four.jpg" alt=""></li>
+			<li><img src="image/five.jpg" alt=""></li>
+			<li><img src="image/six.jpg" alt=""></li>
+			<li><img src="image/one.jpg" alt=""></li>
+		</ul>
+		<ol id="foot">
+			<li class="current"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<span id="left">左</span>
+		<span id="right">右</span>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		var num=0;
+		var timer;
+		//1.让ul移动起来
+             timer=setInterval(function(){
+             	 num++ ; 
+                 if(num==6){//2.处理无缝连接
+                     $('#main').animate({'left':-520*num+'px'});
+                     $('ol li').eq(0).addClass('current');
+                 	$('#foot li').eq(0).siblings().removeClass('current');      
+                 }
+                 else if(num>6){
+                 	num=0;
+                 	$('#main').css('left',-520*num+'px');
+                 	num=1;
+                 }
+                 $('#main').animate({'left':-520*num+'px'});
+                  //3.给ol选中效果
+                 $('ol li').eq(num).addClass('current');
+                 $('#foot li').eq(num).siblings().removeClass('current');    
+             },1000);
+        // 4.鼠标移入停止定时器
+			$('#wrap').mouseenter(function(event) {
+					clearInterval(timer);
+			});
+		// 4.鼠标移出开始定时器
+			$('#wrap').mouseleave(function(event) {
+				timer=setInterval(function(){
+                 if(num<6){
+                  
+                  $('#main').animate({'left':-520*num+'px'});
+                  //3.给ol选中效果
+                  $('ol li').eq(num).addClass('current');
+                 $('#foot li').eq(num).siblings().removeClass('current');             
+                    num++ 
+                 }
+                 else{
+                 	num=0
+                 }      
+             },1000);	
+			});
+         //5.左移动
+          $('#left').click(function(){
+          		num--;
+                 if(num<0){
+                 	num=5;
+                 }
+                 $('#main').animate({'margin-left':-520*num+'px'});
+                  //3.给ol选中效果
+                 $('ol li').eq(num).addClass('current');
+                 $('#foot li').eq(num).siblings().removeClass('current'); 
+          });
+         //5.右移动
+          $('#right').click(function(){
+          		 num++ ;
+                 if(num>5){
+                 	num=0;
+                 }
+                 $('#main').animate({'left':-520*num+'px'});
+                  //3.给ol选中效果
+                 $('ol li').eq(num).addClass('current');
+                 $('#foot li').eq(num).siblings().removeClass('current');                   
+          });
+	</script>
+</body>
+</html>
