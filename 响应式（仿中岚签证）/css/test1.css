@@ -1,0 +1,365 @@
+/*
+* @Author: admin
+* @Date:   2018-06-25 10:41:39
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-06-26 21:54:40
+*/ 
+      *{
+         margin: 0px;
+         padding: 0px;
+         list-style: none;
+      }
+       .icon {
+         width: 1em; height: 1em;
+         vertical-align: -0.15em;
+         fill: currentColor;
+         overflow: hidden;
+      }
+        .top{
+			      border-bottom: 2px solid #0ba1e4;
+                  /* position: fixed;
+                  background: rgba(255, 255, 255, 0.8);
+                  left: 0px;
+                  top: 0px; */
+		    }
+        .mynav{
+        	border: 0px solid transparent;
+          background: white;
+        	padding-top: 20px;
+        }
+        .navbar-header a{
+        	margin-top: -15px;
+        }
+        .collapse ul .mycurrent a{
+        	color: #0ba1e4;
+        	font-size: 18px;
+        }
+    /* 内容区 */
+    .mytitle{
+      padding-top: 50px;
+      text-align: center;
+      font-size: 38px;
+      color:#333333;
+      font-weight: bold; 
+    }
+    .mydivide{
+    	width: 80px;
+    	margin-top: 30px;
+    	height: 2px;
+    	background:#0ba1e4; 
+    }
+    .mycon{
+      padding-top: 30px;
+      text-align: center;
+      font-size: 22px;
+      color: #777777;
+      margin-bottom: 3%;
+    }
+    .mymain1{
+    	overflow: hidden;
+    }
+    .mymain1 div{
+    	width: 20%;
+    	height: 0px;
+    	padding-bottom: 25%;
+    	/* background: pink; */
+    	margin-left: 5%;
+    	float: left;
+    	position: relative;
+    }
+    .mymain1 div .a{
+        position: absolute;
+        top: 10px;
+        left: 2px;
+        font-size: 60px;
+        color: #0ba1e4;
+    }
+    .mymain1 div .b{
+        position: absolute;
+        top: 120px;
+        left: 30px;
+        font-size: 20px;
+        color: #919191;
+    }
+    .thetwo{
+      background: #e1e1e1;
+    }
+    .mypic{
+      font-size: 80px;
+      color: #0ba1e4;
+      padding: 3%;
+    }
+    .thetwo .thumbnail:hover{
+      background: #0ba1e4;
+      cursor: pointer;
+    }
+    .thetwo .thumbnail:hover span{
+      color: white;
+    }
+    .thetwo .thumbnail:hover div p{
+      color: white;
+    }
+    .thetwo .thumbnail:hover div h3{
+      color: white;
+    }
+    .thethree .thumbnail:hover{
+      background: #0ba1e4;
+      cursor: pointer;
+    }
+    .thethree .thumbnail:hover span{
+      color: white;
+    }
+    .thethree .thumbnail:hover div p{
+      color: white;
+    }
+    .thethree .thumbnail:hover div h3{
+      color: white;
+    }
+    .thethree .thumbnail{
+      border: 1px solid #777777;
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+      z-index: 1;
+    }
+    .thethree .mybox{
+      border-bottom:1px solid #777777 ;
+      margin-bottom: 10px;
+    }
+    .thethree .btn{
+      border: 1px solid #0ba1e4;
+      color: #0ba1e4;
+    }
+    .thethree h3{
+    	color: #0ba1e4;
+    }
+    .thethree p{
+    	margin-top: 30px;
+    }
+    .thethree .thumbnail:hover{
+        transform: scale(1.1,1.1);
+        border: 1px solid #fff;
+        z-index: 30;
+        cursor: pointer;
+    }
+    .thethree .thumbnail:hover .mybox{
+    	border-bottom:1px solid #fff;
+    }
+    .myfoot button{
+    	width: 130px;
+    	height: 50px;
+    	background: white;
+    	border: 1px solid #0ba1e4;
+    	color: #0ba1e4;
+    	border-radius: 5%;
+    	margin-left: 45%;
+    	margin-top: 30px;
+    	margin-bottom: 50px;
+    }
+    .thefour{
+      background: #e1e1e1;
+    }
+    .thefour .thumbnail{
+    	border: 0px solid #34a263;
+    	background: #e1e1e1;
+    }
+    .thefour .thumbnail img{
+    	width: 45px;
+    	height: 45px;
+        border-radius: 50%;
+        margin-bottom: -10px;
+    }
+    .thefour .thumbnail .caption{
+    	border: 1px solid #34a263;
+    	border-radius: 1%;
+    }
+    .thefour .thumbnail .caption p .left{
+    	background: #aaaaaa;
+    	color: white;
+    }
+    .thefour .thumbnail .caption p .right{
+    	margin-right: 0px;
+    	color: #aaaaaa;
+    }
+    .thefour .thumbnail .mybottompic{
+    	border: 1px solid #34a263;
+    	width: 60px;
+    	height: 60px;
+    	border-radius: 50%;
+    	margin-left: 42%;
+    	margin-top: 10px;
+    }
+    .thefour .thumbnail .mybottompic svg{
+    	color: #34a263;
+    	font-size: 50px;
+    }
+    .thefive .row .thumbnail{
+    	width: 150px;
+    	height: 150px;
+    }
+    .thefive .row .thumbnail img{
+    	width: 150px;
+    	height: 140px;
+    }
+    .thefive .row .caption{
+    	margin-left: -20px;
+    }
+    .thefive .row .caption h3{
+    	color: #0ba1e4;
+        height: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+    }
+    .thefive .row .caption .mypresent{
+    	color: #777777;
+    	height: 42px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+    }
+    .mymore{
+        width: 80%;
+        height: 80px;
+        margin-bottom: 50px;
+    }
+    .mymore a{
+    	font-size: 25px;
+    }
+    .thesix{
+      background: #e1e1e1;
+    }
+    .thesix a{
+        background: #e1e1e1;
+        border: 1px solid #777777;
+    }
+    .thesix a img{
+        filter: grayscale(100%);
+        transition: all 0.5s;
+    }
+    .thesix a img:hover{
+        background: white;
+        filter: grayscale(0);
+        transition: all 0.5s;
+    }
+    .thesix .mymain{
+        margin-bottom: 50px;
+    }
+    .theseven{
+        background: #363636;
+    }
+    .theseven .row{
+        margin-top: 60px;
+        margin-left: 5%;
+    }
+    .theseven .row .thumbnail{
+        border-left: 2px solid white;
+        border-top: 0px solid white;
+        border-bottom: 0px solid white;
+        border-right: 0px solid white;
+        background: #363636;
+    }
+     .theseven .row .thumbnail .caption h3{
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+     }
+     .theseven .row .thumbnail .caption p{
+        color: white;
+        font-size: 14px;
+     }
+     .theseven .row .thumbnail .caption img{
+        width: 120px;
+        height: 120px;
+     }
+     .theseven .row .thumbnail .caption .weixin{
+        text-align: center;
+     }
+     .theseven .row .thumbnail .mycontact{
+        width: 250px;
+        
+    }
+     .theseven .row .thumbnail .caption .contact{
+        color: white;
+        font-size: 20px;
+     }
+     .theseven .row .thumbnail .caption .contact span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+        font-size: 30px;
+     }
+     .bottom{
+        background: #666666;
+        color: white;
+     }
+     .bottom .container{
+        margin-top: 30px;
+     }
+     .bottom .container div span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url('../image/gongan.png');
+     }
+     .myside{
+        position: fixed;
+        left: 1290px;
+        top: 180px;
+     }
+     .myside li{
+        width: 50px;
+        height: 50px;
+        border: 1px solid #057ad4;
+        margin-top: 5px;
+        background: white;
+     }
+     .myside li span{
+        color: #057ad4;
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 10px;
+     }
+     .myside li:hover{
+        background: #057ad4;
+     }
+     .myside li:hover span{
+        color:white;
+     }
+    @media (max-width: 768px) {
+    	.mymain1 div{
+    	   width: 30%;
+    	   height: 0px;
+    	   padding-top: 10%;
+    	   margin-left: 28%;
+    	   margin-top: 3%;
+    }
+  }
+    @media (max-width: 500px) {
+    	.mymain1 div{
+    	margin-top: 1%;
+    	padding-top: 30%;
+    }
+    	.mymain1 div .a{
+        margin-top: 10%;
+        font-size: 50px;
+    }
+    .mymain1 div .b{
+        margin-top: -30%;
+        font-size: 16px;
+    }
+    }
+    @media (max-width: 100px) {
+    .mymain1 div{
+    	margin-left: 5%;
+    	margin-top: 55%;
+    	padding-bottom: 50%;
+    }
+    }
